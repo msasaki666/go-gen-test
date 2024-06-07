@@ -1,0 +1,31 @@
+{
+  "name": "go-gen-test",
+  "dockerComposeFile": [
+    "../compose.yaml"
+  ],
+  "service": "go-gen-test",
+  "workspaceFolder": "/go-gen-test",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.formatOnSave": true,
+        "dotfiles.repository": "msasaki666/dotfiles",
+        "dotfiles.targetPath": "~/dotfiles",
+        "dotfiles.installCommand": "~/dotfiles/install.sh",
+        "[go]": {
+          "editor.defaultFormatter": "golang.go"
+        }
+      },
+      "extensions": [
+        "mosapride.zenkaku",
+        "mhutchie.git-graph",
+        "donjayamanne.githistory",
+        "eamodio.gitlens",
+        "golang.go",
+        "editorconfig.editorconfig",
+        "ms-azuretools.vscode-docker",
+        "github.copilot"
+      ]
+    }
+  }
+}

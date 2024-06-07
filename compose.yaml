@@ -1,0 +1,16 @@
+volumes:
+  go-mod-cache:
+  go-cache:
+
+services:
+  go-gen-test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "1323:1323"
+    volumes:
+      - .:/go-gen-test
+      - go-mod-cache:/go/pkg/mod
+      - go-cache:/root/.cache/go-build
+    command: tail -f /dev/null
